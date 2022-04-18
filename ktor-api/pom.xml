@@ -11,7 +11,8 @@
         <ktor_version>2.0.0</ktor_version>
         <kotlin.code.style>official</kotlin.code.style>
         <kotlin_version>1.6.20</kotlin_version>
-        <logback_version>1.2.3</logback_version>
+        <logback_version>1.2.11</logback_version>
+        <java_version>17</java_version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <main.class>rafe95.com.github.ApplicationKt</main.class>
@@ -176,6 +177,14 @@
                         <version>${kotlin_version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java_version}</source>
+                    <target>${java_version}</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
